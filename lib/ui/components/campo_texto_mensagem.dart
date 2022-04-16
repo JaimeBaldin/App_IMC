@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CampoDeTexto extends StatelessWidget {
+class CampoDeMensagem extends StatelessWidget {
   final TextEditingController controlador;
   final String texto;
   final String? prefixo;
   final TextInputType teclado;
+  
 
-  const CampoDeTexto(this.controlador, this.texto,
+  const CampoDeMensagem(this.controlador, this.texto,
       {this.prefixo, this.teclado = TextInputType.number, Key? key}) : super(key: key);
 
   @override

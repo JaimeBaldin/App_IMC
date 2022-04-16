@@ -1,8 +1,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:trabalho_02/components/components.dart';
-import 'package:trabalho_02/pages/pages.dart';
+import 'package:trabalho_02/ui/components/components.dart';
+import 'package:trabalho_02/ui/pages/pages.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -17,6 +17,11 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("IMC APP"),
         centerTitle: true,
+        actions: [
+          IconButton(onPressed: abrirContato,
+              icon: const Icon(Icons.email)
+          ),
+        ],
       ),
       body: ListView(
         children: [
@@ -32,7 +37,13 @@ class _HomePageState extends State<HomePage> {
         MaterialPageRoute(builder: (context) => const CalculaImc())
     );
   }
-  
+
+  void abrirContato() {
+    Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const Contato())
+    );
+  }
   
 }
 
